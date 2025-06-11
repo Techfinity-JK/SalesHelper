@@ -57,7 +57,7 @@
   },
 
   { name: 'P300',
-    bio: { finger: false, rfid: false, face: false, palm: true },
+    bio: { finger: false, rfid: false, face: true, palm: true },
     user: 200,
     price: 9700, 
     connection: { lan: true, usb: true, wifi: false, adms: false },
