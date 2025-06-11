@@ -88,7 +88,7 @@
       const resultsDiv = document.getElementById('results');
       resultsDiv.innerHTML = results.length
         ? results.map(p => `<div class="product">
-        <a href="https://my.github.io/product-sorter/${encodeURIComponent(p.name)}" target="_blank"> ${p.name} </a> - ₱${p.price} w/ ${p.warranty} </div>>`).join('')
+        <a href="https://my.github.io/product-sorter/${encodeURIComponent(p.name)}" target="_blank"> ${p.name} </a> - ₱${p.price} w/ ${p.warranty} </div>`).join('')
         : '<div>No matching products found.</div>';
     }
 
