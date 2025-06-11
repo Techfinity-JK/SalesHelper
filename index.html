@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Product Sorter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+    }
+    .filters, .results {
+      margin-top: 1rem;
+    }
+    .product {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ccc;
+    }
+    label {
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Product Filters</h2>
+  <div class="filters">
+    <fieldset>
+      <legend>Biometric Options:</legend>
+      <label><input type="checkbox" id="finger"> Finger</label>
+      <label><input type="checkbox" id="rfid"> RFID</label>
+      <label><input type="checkbox" id="face"> Face</label>
+      <label><input type="checkbox" id="palm"> Palm</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Connection Options:</legend>
+      <label><input type="checkbox" id="lan"> LAN</label>
+      <label><input type="checkbox" id="usb"> USB</label>
+      <label><input type="checkbox" id="wifi"> WiFi</label>
+      <label><input type="checkbox" id="adms"> ADMS</label>
+    </fieldset>
+
+    <label>
+      Minimum Users:
+      <input type="number" id="minUsers" value="0">
+    </label>
+  </div>
+
+  <h2>Matching Products</h2>
+  <div class="results" id="results"></div>
+
+  <script src="products.js"></script>
+  <script>
+    const filters = ['finger', 'rfid', 'face', 'palm', 'lan', 'usb', 'wifi', 'adms',];
+    filters.forEach(id => {
+      document.getElementById(id).addEventListener('change', updateResults);
+    });
+    document.getElementById('minUsers').addEventListener('input', updateResults);
+
+    function updateResults() {
+      const requiredBio = {};
+      const requiredConn = {};
+      filters.forEach(key => {
+        const checked = document.getElementById(key).checked;
+        if (['finger', 'rfid', 'face', 'palm'].includes(key)) {
+          requiredBio[key] = checked;
+        } else {
+          requiredConn[key] = checked;
+        }
+      });
+
+      const minUsers = parseInt(document.getElementById('minUsers').value) || 0;
+
+      const results = products.filter(product => {
+        // Check biometric
+        for (let key in requiredBio) {
+          if (requiredBio[key] && !product.bio[key]) return false;
+        }
+        // Check connections
+        for (let key in requiredConn) {
+          if (requiredConn[key] && !product.connection[key]) return false;
+        }
+        // Check user count
+        return product.user >= minUsers;
+      });
+
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = results.length
+        ? results.map(p => `<div class="product">
+        <a href="https://my.github.io/product-sorter/${encodeURIComponent(p.name)}" target="_blank"> ${p.name} </a> - ₱${p.price} w/ ${p.warranty} </div>>`).join('')
+        : '<div>No matching products found.</div>';
+    }
+
+    updateResults(); // Initialize on load
+  </script>
+
+</body>
+</html>
