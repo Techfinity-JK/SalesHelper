@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css">
-  <title>Sales Helper v1.0</title>
+  <title>Sales Helper v0.1</title>
+
+  <!--TO DO Remove styles-->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,14 +23,15 @@
     }
   </style>
 </head>
-<body>
 
-  <h2>Product Filters</h2>
+<body>
+  <h4>Made by Lraxious</h4>
+  <h2>Biometric Product Filters</h2>
   <div class="filters">
     <fieldset>
       <legend>Biometric Options:</legend>
-      <label><input type="checkbox" id="finger"> Finger</label>
-      <label><input type="checkbox" id="rfid"> RFID</label>
+      <label><input type="checkbox" id="finger"> Fingerprint</label>
+      <label><input type="checkbox" id="rfid"> RFID Card</label>
       <label><input type="checkbox" id="face"> Face</label>
       <label><input type="checkbox" id="palm"> Palm</label>
     </fieldset>
@@ -88,7 +91,7 @@
       const resultsDiv = document.getElementById('results');
       resultsDiv.innerHTML = results.length
         ? results.map(p => `<div class="product">
-        <a href="https://techfinity-jk.github.io/SalesHelper/Biometrics/${encodeURIComponent(p.name)}" target="_blank"> ${p.name} </a> - ₱${p.price} w/ ${p.warranty} </div>`).join('')
+        <a href="https://techfinity-jk.github.io/SalesHelper/Biometrics/${encodeURIComponent(p.name)}"> ${p.name} </a> - ₱${p.price} w/ ${p.warranty} </div>`).join('')
         : '<div>No matching products found.</div>';
     }
 
