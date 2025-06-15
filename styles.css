@@ -1,1 +1,28 @@
-body {background-color: rgb(27, 25, 25); color: azure;}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(27, 25, 25); color: azure;
+}
+
+/* Main Product Div */
+.centered-box {
+  max-width: 90%;
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.centered-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.centered-box p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+}
