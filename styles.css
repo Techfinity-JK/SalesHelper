@@ -11,18 +11,39 @@ body {
   width: 300px;
   margin: 40px auto;
   padding: 20px;
-  background-color: white;
+  background-color: rgb(42, 39, 39); color: azure;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 .centered-box img {
   width: 100%;
+  max-width: 200px;
+  max-height: 200px;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 .centered-box p {
   margin-top: 15px;
   font-size: 1rem;
-  color: #333;
+  color: azure;
 }
+
+.menu {
+  margin: 1rem auto;
+  text-align: center;
+}
+.filters, .results {
+  margin: 1rem auto;
+  text-align: center;
+}
+.product {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+label {
+  margin-right: 1rem;
+  }
