@@ -25,7 +25,7 @@
   },
 
   { name: 'T8-ID',
-    bio: { finger: true, rfid: false, face: false, palm: false },
+    bio: { finger: true, rfid: true, face: false, palm: false },
     user: 3000,
     price: 11200, 
     connection: { lan: true, usb: true, wifi: false, adms: true },
@@ -49,7 +49,7 @@
   },
 
   { name: 'FA110',
-    bio: { finger: true, rfid: true, face: false, palm: false },
+    bio: { finger: true, rfid: false, face: true, palm: false },
     user: 500,
     price: 9700, 
     connection: { lan: true, usb: true, wifi: true, adms: true },
@@ -65,7 +65,7 @@
   },
 
   { name: 'Sf200id-WIFI',
-    bio: { finger: false, rfid: false, face: false, palm: false },
+    bio: { finger: true, rfid: true, face: false, palm: false },
     user: 5000, //TO DO
     price: 15700, 
     connection: { lan: true, usb: false, wifi: true, adms: false },
