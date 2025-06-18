@@ -5,6 +5,28 @@ body {
   background-color: rgb(27, 25, 25); color: azure;
 }
 
+/* Loading Screen Div */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2c2f33;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  pointer-events: none; /* Prevents interaction during fade */
+}
+
+
 /* Main Product Div */
 .centered-box {
   max-width: 90%;
