@@ -1,6 +1,44 @@
 //BIOMETRIC SCANNERS
  const products = [
+  { name: 'M06',
+    btype: { timekeeping: false, notimekeeping: true, dooraccess: true},
+    bio: { finger: false, rfid: true, face: false, palm: false },
+    user: 2000,
+    price: 5700, 
+    connection: { lan: true, usb: false, wifi: false, adms: false },
+    warranty: '12 months',
+  },
+
+  { name: 'X6',
+    btype: { timekeeping: false, notimekeeping: true, dooraccess: true},
+    bio: { finger: true, rfid: true, face: false, palm: false },
+    user: 500,
+    price: 7900, 
+    connection: { lan: true, usb: false, wifi: false, adms: false },
+    warranty: '12 months',
+  },
+
+  { name: 'F04-ID',
+    btype: { timekeeping: true, notimekeeping: false, dooraccess: true},
+    bio: { finger: true, rfid: true, face: false, palm: false },
+    user: 1500,
+    price: 13500, 
+    connection: { lan: true, usb: true, wifi: false, adms: false },
+    warranty: '36 months',
+  },
+
+  { name: 'TF-1700-ID',
+    btype: { timekeeping: true, notimekeeping: false, dooraccess: true},
+    bio: { finger: true, rfid: true, face: false, palm: false },
+    user: 1500,
+    price: 19700, 
+    connection: { lan: true, usb: true, wifi: false, adms: false },
+    warranty: '36 months',
+  },
+
+
   { name: 'SC700-ID',
+    btype: { timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: false, rfid: true, face: false, palm: false },
     user: 30000,
     price: 8800, 
@@ -9,6 +47,7 @@
   },
 
   { name: 'LX50',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: false, face: false, palm: false },
     user: 500,
     price: 5700, 
@@ -17,6 +56,7 @@
   },
 
   { name: 'TX628',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: false, face: false, palm: false },
     user: 3200,
     price: 8900, 
@@ -25,6 +65,7 @@
   },
 
   { name: 'T8-ID',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: true, face: false, palm: false },
     user: 3000,
     price: 11200, 
@@ -33,6 +74,7 @@
   },
 
   { name: 'FA1000-ld',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: false, rfid: true, face: true, palm: false },
     user: 1000, //TO DO
     price: 9200, 
@@ -41,6 +83,7 @@
   },
 
   { name: 'BK100',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 1000, //TO DO
     price: 9700, 
@@ -49,6 +92,7 @@
   },
 
   { name: 'FA110',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 500,
     price: 9700, 
@@ -57,6 +101,7 @@
   },
 
   { name: 'P300',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: false, rfid: false, face: true, palm: true },
     user: 200,
     price: 9700, 
@@ -65,6 +110,7 @@
   },
 
   { name: 'Sf200id-WIFI',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: true, face: false, palm: false },
     user: 5000, //TO DO
     price: 15700, 
@@ -73,6 +119,7 @@
   },
 
   { name: 'F22-ID-WIFI',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: true, face: false, palm: false },
     user: 5000, //TO DO
     price: 13900, 
@@ -81,6 +128,7 @@
   },
 
   { name: 'Iface3',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: true, face: true, palm: false },
     user: 5000, //TO DO
     price: 19400, 
@@ -89,6 +137,7 @@
   },
 
   { name: 'MB460',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: true, face: true, palm: false },
     user: 5000, //TO DO
     price: 14800, 
@@ -97,6 +146,7 @@
   },
 
   { name: 'FA210-ID',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: true, face: true, palm: false },
     user: 2000, //TO DO
     price: 14800, 
@@ -105,6 +155,7 @@
   },
 
   { name: 'FA210-ID-WIFI',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: true, face: true, palm: false },
     user: 2000, //TO DO
     price: 17000, 
@@ -113,6 +164,7 @@
   },
 
   { name: 'Xface100',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 2000, //TO DO
     price: 18900, 
@@ -121,6 +173,7 @@
   },
 
   { name: 'MultiBio700-H',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 2000, //TO DO
     price: 19800, 
@@ -129,6 +182,7 @@
   },
 
   { name: 'UFace800',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 4000, //TO DO
     price: 22800, 
@@ -137,6 +191,7 @@
   },
 
   { name: 'MB560VL',
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 2000, //TO DO
     price: 21800, 
