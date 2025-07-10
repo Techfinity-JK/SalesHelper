@@ -41,7 +41,7 @@ function updateResults() {
 
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = results.length
-    ? results.map(p => `<div class="product">
+    ? results.map(p => `<div class="product biometric-card poppinsfont">
       <a href="https://techfinity-jk.github.io/SalesHelper/Biometrics/${encodeURIComponent(p.name)}">${p.name}</a> - ₱${p.price} w/ ${p.warranty}
     </div>`).join('')
     : '<div>No matching products found.</div>';

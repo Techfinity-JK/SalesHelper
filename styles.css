@@ -66,7 +66,7 @@ body {
   margin: 1rem auto;
   text-align: center;
 }
-.filters, .results {
+.filters {
   margin: 1rem auto;
   text-align: center;
 }
@@ -74,7 +74,7 @@ body {
   padding: 0.5rem;
   border-bottom: 1px solid #ccc;
 }
-label, legend {
+label, legend, .poppinsfont {
   font-family: 'Poppins', sans-serif;
   font-size: 16px; /* Optional: change size too */
   color: var(--p3);
@@ -85,7 +85,8 @@ label, legend {
   font-weight: 700;
 }
 
-.selector-card-container{
+/* Selector Card */
+.selector-card-container, .results-card-container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,6 +103,21 @@ label, legend {
   outline: var(--p3) solid 2px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.selector-card:hover {
+
+/* Biometric Card */
+.biometric-card{
+  max-width: 600px;
+  min-width: 600px;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.1);
+  outline: var(--p3) solid 2px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Card Hover */
+.selector-card:hover, .biometric-card:hover {
   background-color: #d4fcfb;
 }
