@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <title>Sales Helper v0.6.3</title>
+  <title>Sales Helper v0.7.0</title>
 
 </head>
 
@@ -16,36 +17,38 @@
 
   <!-- Main Website -->
   <div class="menu">
+  <!-- Title -->
   <div>
-    <h2>Biometric Product Filters</h2>
+    <h2 class="techfinity-sales-helper">Techfinity Sales Helper</h2>
   </div>
-  <div class="filters">
-    <fieldset>
+  <!-- Standalone Biometrics or Door Access Options: -->
+  <div class="filters selector-card-container">
+    <div class="filters selector-card">
       <legend>Standalone Biometrics or Door Access Options:</legend>
       <label><input type="checkbox" id="timekeeping"> Time Keeping w/ Logs</label>
       <label><input type="checkbox" id="notimekeeping"> No Time Keeping w/o Logs</label>
       <label><input type="checkbox" id="dooraccess"> Door Access</label>
-    </fieldset>
-    <fieldset>
+    </div>
+    <div class="filters selector-card">
       <legend>Biometric Options:</legend>
       <label><input type="checkbox" id="finger"> Fingerprint</label>
       <label><input type="checkbox" id="rfid"> RFID Card</label>
       <label><input type="checkbox" id="face"> Face</label>
       <label><input type="checkbox" id="palm"> Palm</label>
-    </fieldset>
-    <fieldset>
+    </div>
+    <div class="filters selector-card">
       <legend>Connection Options:</legend>
       <label><input type="checkbox" id="lan"> LAN</label>
       <label><input type="checkbox" id="usb"> USB</label>
       <label><input type="checkbox" id="wifi"> WiFi</label>
       <label><input type="checkbox" id="adms"> ADMS</label>
-    </fieldset>
-    <fieldset>
+    </div>
+    <div class="filters selector-card">
       <label>
         Minimum Users:
         <input type="number" id="minUsers" value="0">
       </label>
-    </fieldset>
+    </div>
   </div>
 
   <h2>Matching Products</h2>
