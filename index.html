@@ -24,20 +24,32 @@
   <!-- Standalone Biometrics or Door Access Options: -->
   <div class="filters selector-card-container">
     <div class="filters selector-card">
-      <legend>Standalone Biometrics or Door Access Options:</legend>
+      <legend class="poppins-bold">Standalone Biometrics or Door Access Options:</legend>
       <label><input type="checkbox" id="timekeeping"> Time Keeping w/ Logs</label>
       <label><input type="checkbox" id="notimekeeping"> No Time Keeping w/o Logs</label>
       <label><input type="checkbox" id="dooraccess"> Door Access</label>
     </div>
     <div class="filters selector-card">
-      <legend>Biometric Options:</legend>
-      <label><input type="checkbox" id="finger"> Fingerprint</label>
-      <label><input type="checkbox" id="rfid"> RFID Card</label>
-      <label><input type="checkbox" id="face"> Face</label>
-      <label><input type="checkbox" id="palm"> Palm</label>
+      <legend class="poppins-bold">Biometric Options:</legend>
+      <label><input type="checkbox" id="finger"> 
+        <img src="/Images/fingerprinticon.png" class="biometrics-icon" alt="Fingerprint Icon">
+        Fingerprint
+      </label>
+      <label><input type="checkbox" id="rfid">
+        <img src="/Images/cardicon.png" class="biometrics-icon" alt="Card Icon">
+        RFID Card
+      </label>
+      <label><input type="checkbox" id="face">
+        <img src="/Images/faceicon.png" class="biometrics-icon" alt="Face Icon">
+        Face
+      </label>
+      <label><input type="checkbox" id="palm">
+        <img src="/Images/palmicon.png" class="biometrics-icon" alt="Face Icon">
+        Palm
+      </label>
     </div>
     <div class="filters selector-card">
-      <legend>Connection Options:</legend>
+      <legend class="poppins-bold">Connection Options:</legend>
       <label><input type="checkbox" id="lan"> LAN</label>
       <label><input type="checkbox" id="usb"> USB</label>
       <label><input type="checkbox" id="wifi"> WiFi</label>
@@ -45,6 +57,7 @@
     </div>
     <div class="filters selector-card">
       <label>
+        <legend class="poppins-bold">No. of users or Employees:</legend>
         Minimum Users:
         <input type="number" id="minUsers" value="0">
       </label>

@@ -74,7 +74,7 @@
   },
 
   { name: 'FA1000-ld',
-    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: false, rfid: true, face: true, palm: false },
     user: 1000, //TO DO
     price: 9200, 
@@ -92,7 +92,7 @@
   },
 
   { name: 'FA110',
-    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 500,
     price: 9700, 
@@ -137,7 +137,7 @@
   },
 
   { name: 'MB460',
-    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: true, face: true, palm: false },
     user: 5000, //TO DO
     price: 14800, 
@@ -164,7 +164,7 @@
   },
 
   { name: 'Xface100',
-    btype: {timekeeping: true, notimekeeping: false, dooraccess: false},
+    btype: {timekeeping: true, notimekeeping: false, dooraccess: true},
     bio: { finger: true, rfid: false, face: true, palm: false },
     user: 2000, //TO DO
     price: 18900, 
